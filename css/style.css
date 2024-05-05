@@ -1,0 +1,642 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clr{
+    clear: both;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Source Sans 3", sans-serif;
+}
+/* //////////////////////////////////// */
+/* ====> Start Navbar Section <==== */
+.navbar{
+    height: 60px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    z-index: 999;
+    /* padding-top: 20px; */
+}
+.nav-container{
+    width: 75%;
+    margin: auto;
+}
+.logo{
+    float: left;
+    padding-top: 16px;
+}
+.logo span{
+    font-size: 24px;
+    color: rgb(255, 48, 91);
+    font-weight: bold;
+}
+.nav-pages{
+    float: right;
+    padding-top: 20px;
+}
+.pages-li{
+    list-style-type: none;
+    float: left;
+    margin: 0 12px;
+}
+.nav-pages a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    transition: color 0.5s;
+}
+.pages-li:hover .pages-a{
+    color:rgb(255, 48, 91);
+}
+/* ====> End Navbar Section <==== */
+/* //////////////////////////////////////// */
+/* ====> Start Home Section <==== */
+.header{
+    background-image: url(../images/hero\ img.jpg);
+    background-size: cover;
+    background-position: 1%;
+    height: 100vh;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+.header-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.header-content h1{
+    font-size: 70px;
+    font-weight: 700;
+    color: rgb(255, 48, 91);
+    margin: 8px 0;
+}
+.header-content h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+.header-content h4{
+    font-size: 26px;
+    font-weight: 300;
+    color: rgb(215, 215, 215);
+}
+.des1{
+    width: 0;  
+    /* ^ i know this(using width=0) not the right way to do it */
+    position: relative;
+    top: 10px;
+    animation-name: header-clip1;
+    animation-duration: 2s;
+    animation-play-state: running;
+    overflow: hidden;
+    display: inline-block;
+}
+/* .des2{
+    position: relative;
+    top: 10px;
+    animation-name: header-clip2;
+    animation-delay:1.2s ;
+    animation-duration: 1s;
+    animation-play-state: running;
+    overflow: hidden;
+    display: inline-block;
+    width: 0;
+} */
+.dev{
+    position: relative;
+    top: 10px;
+    animation-name: header-clip3;
+    animation-delay:2s ;
+    animation-duration: 1s;
+    animation-play-state: running;
+    overflow: hidden;
+    display: inline-block;
+    width: 0;
+}
+.animate-clip{
+    border-right: 2px solid white;
+    width: 100px;
+}
+/* Trying to do  a similar animation */
+@keyframes header-clip1{
+    0%   {width: 100px;}
+    10%  {width: 90px;}
+    15%  {width: 75px;}
+    20%  {width: 60px;}
+    25%  {width: 0px;}
+    30%  {width: 25px;}
+    35%  {width: 40px;}
+    45%  {width: 70px;}
+    65%  {width: 100px;}
+    75%  {width: 90px;}
+    80%  {width: 75px;}
+    90%  {width: 60px;}
+    100%  {width: 0px;}
+}
+/* @keyframes header-clip2{
+    0%   {width: 0px;}
+    15%  {width: 10px;}
+    25%  {width: 25px;}
+    35%  {width: 50px;}
+    50%  {width: 60px;}
+    75%  {width: 75px;}
+    85%  {width: 90px;}
+    100% {width: 110px;}
+} */
+@keyframes header-clip3{
+    0%   {width: 0px;}
+    15%  {width: 10px;}
+    25%  {width: 25px;}
+    35%  {width: 50px;}
+    50%  {width: 60px;}
+    75%  {width: 75px;}
+    85%  {width: 90px;}
+    100% {width: 110px;}
+}
+/*====> End Home Section <====  */
+/* ////////////////////////////////////////// */
+/* ====> Start About Section <====  */
+#about{
+    padding: 100px 0px;
+}
+.about-container{
+    width: 80%;
+    margin: auto;
+    padding-inline: 80px;
+}
+.about-img{
+    float: left;
+    width: 35%;
+    height: 450px;
+    margin-left: 60px;
+    position: relative;
+    border: 8px solid #555555;
+    border-radius: 5px;
+}
+.about-img img{
+    width: 103%;
+    height: 102%;
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    border-radius: 5px;
+}
+.about-text{
+    float: right;
+    width: 50%;
+}
+.border-left{
+    display: inline-block;
+    width: 4px;
+    height: 25px;
+    background-color: rgb(255, 48, 91);
+}
+.about-text h2{
+    display: inline-block;
+    /* border-left: 4px solid rgb(255, 48, 91); */
+    padding-left: 6px;
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+.about-text p{
+    color: rgb(85, 85, 85);
+    font-weight: 400;
+    line-height: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed gray;
+    margin-bottom: 25px;
+    width: 600px;
+}
+.about-info{
+    width: 80%;
+    margin-bottom: 20px;
+}
+.about-info span{
+    color: #333333;
+    font-weight: 500;
+    margin-right: 4px;
+}
+.left-ul{
+    float: left;
+    width: 50%;
+}
+.right-ul{
+    float: right;
+    width: 50%;
+}
+.about-info ul li{
+    list-style-type: none;
+    margin-bottom: 20px;
+    color: rgb(85, 85, 85);
+}
+.about-text a{
+    padding: 15px 30px;
+    color: white;
+    background-color:rgb(255, 48, 91) ;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 15px;
+}
+.about-text i{
+    margin-left: 5px;
+}
+/*  ====> End About Section <====  */
+/* ////////////////////////////////////////////////// */
+/* ====> Start Our Services Section <====  */
+#Services{
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 90px 0px;
+}
+.Services-container{
+    width: 80%;
+    margin: auto;
+}
+.Services-container h2{
+    font-size: 40px;
+    margin-bottom: 7px;
+}
+.underlines{
+    margin-bottom: 50px;
+}
+.up-bottom{
+    background-color:rgb(255, 48, 91) ;
+    display:block ;
+    width: 80px;
+    height: 0.5px;
+    margin: auto;
+}
+.middle{
+    background-color:rgb(255, 48, 91) ;
+    display:block ;
+    width: 160px;
+    height: 0.5px;
+    margin: auto;
+    margin-block:4px;
+}
+.services-div{
+    float: left;
+    width: 25%;
+    padding-block:40px ;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+.services-div i{
+    color:rgb(255, 48, 91) ;
+    font-size: 36px;
+    transition: transform 0.7s;
+}
+.services-div h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-block:20px ;
+}
+.services-div p{
+    color: #555555;
+    line-height: 25px;
+    width: 260px;
+    margin: auto;
+}
+.services-div:hover{
+    background-color: #FFFFFF;
+}
+.services-div:hover.services-div i{
+    transform: scale(1.2);
+}
+/* ====> End Our Services Section <====  */
+/* //////////////////////////////////////////////////// */
+/* ====> Start Our Portfolio Section <==== */
+#portfolio{
+    text-align: center;
+    padding: 100px 0px;
+}
+.portfolio-container{
+    width: 80%;
+    margin: auto;
+    padding-inline: 20px;
+}
+.portfolio-div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.5s;
+}
+.portfolio-container h2{
+    font-size: 40px;
+    margin-bottom: 7px;
+}
+.portfolio-sections{
+    margin-bottom: 40px;
+}
+.portfolio-sections ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 10px;
+
+}
+.diff-li{
+    color:rgb(255, 48, 91) ;
+}
+.portfolio-div-container{
+    position: relative;
+    float: left; 
+    width: 31%;
+    height: 275px;
+    background-size: cover;
+    margin: 10px;
+
+}
+.portfolio-div:hover{
+    background-color: #0000007e;
+}
+.p-d-c1{
+    background-image: url(../images/portfolio/1.jpg);
+}
+.p-d-c2{
+    background-image: url(../images/portfolio/2.jpg);
+}
+.p-d-c3{
+    background-image: url(../images/portfolio/3.jpg);
+}
+.p-d-c4{
+    background-image: url(../images/portfolio/4.jpg);
+}
+.p-d-c5{
+    background-image: url(../images/portfolio/5.jpg);
+}
+.p-d-c6{
+    background-image: url(../images/portfolio/6.jpg);
+}
+
+/*  ====> End Our Portfolio Section <==== */
+/* ///////////////////////////////////////////////////////// */
+/* ====> Start statistics Section <==== */
+#statistics{
+    background-color: #F1F1F1;
+}
+.statistics-container{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-block:90px;
+    padding-inline:30px ;
+}
+.statistics-sec{
+    float: left;
+    width: 25%;
+}
+.statistics-sec i{
+    color: rgb(255, 48, 91);
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.statistics-sec h3{
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.statistics-sec h5{
+    font-size: 16px;
+    color: #717171;
+    font-weight: 600;
+}
+/* ====> End statistics Section <==== */
+/* ////////////////////////////////////////////////////// */
+/* ====> Start Feedback Section <==== */
+#feedback{
+    padding-block: 90px;
+}
+.feedback-container{
+    width: 80%;
+    margin: auto;
+}
+.feedback-container h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.client-feedback{
+    background-color: #F1F1F1;
+    width: 65%;
+    height: 275px;
+    margin: auto;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    position: relative;
+}
+.coloring{
+    width: 100px;
+    height: 100px;
+    border-top-left-radius: 6px;
+    border-left: 90px solid rgb(255, 48, 91) ;
+    border-right: 90px solid transparent ;
+    border-top: 90px solid rgb(255, 48, 91) ;
+    border-bottom: 90px solid transparent ;
+}
+.client-img{
+    float: left;
+    width: 30%;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 50px;
+    left: 35px;
+}
+.client-img img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.client-info{
+    float: right;
+    width: 70%;
+    position: absolute;
+    top: 50px;
+    right: 40px;
+}
+.client-info h3{
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.client-info h4{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #777777;
+    font-weight: 500;
+}
+.client-feedback p{
+    color: #555555;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+.rate i{
+    color: #F1C30D;
+    font-size: 15px;
+}
+.feedback-icons{
+    margin: auto;
+    width: 200px;
+    text-align: center;
+}
+.big-icon{
+    width: 25px;
+    height: 10px;
+    background-color:rgb(255, 48, 91) ;
+    border-radius: 20px;
+    margin: auto;
+    margin-left: 80px;
+    margin-right: 7px;
+    float: left;
+}
+.small-icon{
+    width: 10px;
+    height: 10px;
+    border:1px solid rgb(255, 48, 91) ;
+    border-radius: 20px;
+    margin: auto;
+    float: left;
+}
+/* ====> End Feedback Section <==== */
+/* /////////////////////////////////////////////////// */
+/* ====> Start Our Blog Section <==== */
+#Blog{
+    background-color: #F1F1F1;
+    padding-block: 90px;
+}
+.blog-container h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom:10px ;
+}
+.blog-container{
+    width: 79%;
+    margin: auto;
+}
+.blog-sec-container{
+    width: 33%;
+    padding: 0 20px;
+    float: left;
+}
+.blog-sec{
+    background-color: #FFFFFF;
+    padding-bottom: 20px;
+}
+.blog-sec img ,.blog-sec iframe{
+    width: 100%;
+    height: 200px;
+}
+.blog-sec-text{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.blog-sec p{
+    color: #555555;
+    line-height: 25px;
+    margin-block: 10px;
+}
+.blog-sec-text a{
+    text-decoration: none;
+    color: #333333;
+    transition: color 0.3s;
+}
+.blog-sec-text h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+.blog-sec a:hover{
+    color:rgb(255, 48, 91) ;
+}
+/* /////////////////////////////////////////////////// */
+/* ====> Start Contact Us Section <==== */
+#Contact-us{
+    padding-block: 90px;
+}
+.contact-container{
+    width: 50%;
+    margin: auto;
+}
+.contact-container h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.contact-in{
+    width:48%;
+    height: 45px;
+    padding: 8px 8px;
+    margin-block:20px ;
+    border-radius: 6px;
+    border: 1px solid rgb(203, 203, 203);
+}
+.contact-in1{
+    margin-right: 25px;
+}
+.diff-input{
+    width:100%;
+    height: 45px;
+    padding: 8px 8px;
+    margin-block:20px ;
+    margin-right: 15px;
+    border-radius: 6px;
+    border: 1px solid rgb(203, 203, 203);
+}
+.contact-container textarea{
+    border-radius: 6px;
+    padding: 8px 9px;
+    border: 1px solid rgb(203, 203, 203);
+}
+.contact-container button{
+    padding: 10px 20px;
+    background-color:rgb(255, 48, 91)  ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top:25px;
+}
+/* ====> End Contact Us Section <==== */
+/* /////////////////////////////////////////////////// */
+/* ====> Start Footer Section <==== */
+.footer{
+    background-color: #333333;
+    text-align: center;
+    padding-block: 60px;
+    color: white;
+}
+.footer span{
+    color:rgb(255, 48, 91) ;
+    transition: text-decoration 1s;
+}
+.footer i{
+    margin-bottom: 18px;
+    margin-inline: 10px;
+    transition: color 0.3s;
+}
+.footer i:hover{
+    color:rgb(255, 48, 91) ;
+}
+.footer span:hover{
+    text-decoration: underline;
+}
+/* ====> End Footer Section <==== */
